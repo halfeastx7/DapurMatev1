@@ -1,0 +1,154 @@
+/* Dashboard.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+.btn-success {
+    background-color: #29a847;
+    border-color: #29a847;
+}
+
+.btn-success:hover {
+    background-color: #238038;
+    border-color: #238038;
+}
+
+.inventory-card {
+  flex: auto;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.totalinv {
+  color: #36b37e !important;
+}
+
+.danger {
+  color: #f03e3e !important;
+}
+
+.warning {
+  color: #f59f00 !important;
+}
+
+.view-details-button {
+  margin-top: 0px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+.card {
+  width: 100%; /* Ensure the card itself takes up the full width */
+  border: 1px solid #dee2e6; /* Optional: Add a border to the card */
+  border-radius: 5px; /* Optional: Add rounded corners to the card */
+  overflow: hidden; /* Ensures the header and body fit within the card's bounds */
+}
+
+.card-header {
+  background-color: #faf8f9; /* Background color to match the card body */
+  width: 100%; /* Ensure the header spans the full width */
+  padding: 0.75rem 1.25rem; /* Adjust padding as needed */
+  border-bottom: 1px solid #dee2e6; /* Optional: Add a bottom border */
+  text-align: center;
+}
+
+.card-body {
+  padding:0;
+  margin: 0; 
+  width: 100%;
+  height: 100%;
+
+}
+
+.card-title {
+  margin-bottom: 0;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #36b37e;
+}
+
+  
+  /* Custom green bullet points for the shopping list */
+  .shopping-list-preview .list-group-item {
+    position: relative;
+    padding-left: 2rem; /* Space for the custom bullet */
+    border: none; /* Remove borders for a cleaner look */
+    background-color: transparent; /* Keep the list item background transparent */
+  }
+  
+  .shopping-list-preview .list-group-item::before {
+    content: '•'; /* Bullet point */
+    color: #36b37e; /* Green color for bullet */
+    font-size: 1.5rem; /* Size of the bullet */
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+  }
+  
+  /* Dashboard.css */
+
+/* Tooltip styling */
+.tooltip-inner {
+    background-color: #29a847; /* Change background color */
+    color: white; /* Change text color */
+    font-family: 'Poppins', sans-serif; /* Use Poppins font */
+    font-size: 0.9rem; /* Adjust font size */
+    padding: 8px 12px; /* Add padding */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  
+  /* Tooltip arrow styling */
+  .bs-tooltip-top .tooltip-arrow::before,
+  .bs-tooltip-right .tooltip-arrow::before,
+  .bs-tooltip-bottom .tooltip-arrow::before,
+  .bs-tooltip-left .tooltip-arrow::before {
+    border-color: transparent;
+    border-width: 6px;
+  }
+  
+  .bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: #29a847;
+  }
+  
+  .bs-tooltip-right .tooltip-arrow::before {
+    border-right-color: #29a847;
+  }
+  
+  .bs-tooltip-bottom .tooltip-arrow::before {
+    border-bottom-color: #29a847;
+  }
+  
+  .bs-tooltip-left .tooltip-arrow::before {
+    border-left-color: #29a847;
+  }
+  
+  /* Tooltip fade-in animation */
+  .tooltip {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .tooltip.show {
+    opacity: 1;
+  }
+  
+  .completed-item {
+    background-color: #d4edda; /* light green background for completed items */
+    color: #155724; /* dark green text for completed items */
+    text-decoration: line-through;
+  }
+  
+  .recipe-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
+    
+  }

@@ -1,0 +1,204 @@
+/* Global Layout */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw; /* Ensure full width for the app */
+  overflow: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar-main {
+  background-color: white;
+  width: 200px; /* Fixed sidebar width */
+  position: fixed;
+  height: 100vh; /* Full height of the viewport */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000; /* Ensure sidebar stays on top */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sidebar shadow */
+  transition: width 0.3s ease; /* Smooth transition for collapsing/expanding */
+  overflow: hidden;
+}
+
+/* Expanded Sidebar */
+.sidebar-main.expanded {
+  width: 200px;
+}
+
+/* Collapsed Sidebar */
+.sidebar-main.collapsed {
+  width: 60px; /* Narrower sidebar width when collapsed */
+}
+
+/* Sidebar Logo and Text Styling */
+.logo-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.logo-text {
+  font-family: 'Lilita One', cursive;
+  font-size: 2rem;
+  color: #29a847;
+  text-align: center;
+}
+
+.logo-text-collapsed {
+  font-family: 'Lilita One', cursive;
+  font-size: 1rem;
+  color: #29a847;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  white-space: nowrap;
+  text-align: center;
+  margin: 0;
+  line-height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.sidebar-logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  transition: width 0.3s ease, height 0.3s ease; /* Smooth resizing of logo */
+}
+
+.sidebar-logo.collapsed {
+  width: 40px;
+  height: 40px;
+}
+
+/* Sidebar Menu Styles */
+.menu-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.ant-menu-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.ant-menu-item:hover {
+  background-color: #29a847;
+  color: #fff;
+}
+
+.ant-menu-item-selected {
+  background-color: #29a847 !important;
+  color: #fff !important;
+}
+
+/* Sidebar Footer Button */
+.sidebar-footer-button {
+  text-align: center;
+  margin-top: auto;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+.sidebar-toggle {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Main Content Styling */
+.content-with-sidebar {
+  flex-grow: 1;
+  margin-left: 200px; /* Offset the sidebar width when expanded */
+  padding: 20px;
+  height: calc(100vh - 60px); /* Subtract footer height */
+  overflow-y: auto; /* Allow vertical scrolling */
+  box-sizing: border-box;
+  transition: margin-left 0.3s ease; /* Smooth content shifting */
+}
+
+.content-with-sidebar.collapsed {
+  margin-left: 60px; /* Adjust content margin when sidebar is collapsed */
+}
+
+.content-full {
+  flex-grow: 1;
+  margin-left: 0;
+  padding: 20px;
+  height: calc(100vh - 60px); /* Subtract footer height */
+  overflow-y: auto; /* Allow vertical scrolling */
+  box-sizing: border-box;
+}
+
+/* Footer Fixed at the Bottom */
+.FooterHome {
+  position: fixed;
+  bottom: 0;
+  left: 200px; /* Adjust to sidebar width */
+  width: calc(100% - 200px); /* Ensure the footer takes the remaining width */
+  height: 60px; /* Set a fixed height for the footer */
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: left 0.3s ease, width 0.3s ease; /* Smooth transition on sidebar collapse */
+}
+
+/* Adjust Footer for Collapsed Sidebar */
+.sidebar-collapsed .FooterHome {
+  left: 60px; /* Adjust footer when sidebar is collapsed */
+  width: calc(100% - 60px); /* Adjust footer width when sidebar is collapsed */
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+  .sidebar-main {
+    width: 60px; /* Narrower sidebar for small screens */
+  }
+
+  .sidebar-main.collapsed {
+    width: 40px; /* Sidebar collapses further on small screens */
+  }
+
+  .content-with-sidebar {
+    margin-left: 60px; /* Adjust content margin for smaller sidebar */
+  }
+
+  .content-with-sidebar.collapsed {
+    margin-left: 40px; /* Adjust content margin when sidebar is collapsed on small screens */
+  }
+
+  .FooterHome {
+    left: 60px;
+    width: calc(100% - 60px); /* Adjust footer width for smaller sidebar */
+  }
+
+  .sidebar-collapsed .FooterHome {
+    left: 40px;
+    width: calc(100% - 40px); /* Adjust footer width when sidebar is collapsed on smaller screens */
+  }
+}

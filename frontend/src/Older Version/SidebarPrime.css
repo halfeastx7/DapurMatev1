@@ -1,0 +1,69 @@
+.App-sidebar {
+  display: inline-flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f0f2f5;
+
+  
+}
+
+.sidebar-main {
+  background-color: white;
+  height: 100vh;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  /* display: flex;
+  flex-direction: column; */
+  /* justify-content: start; */
+  /* align-items: top; */
+}
+
+.logo-sidebar {
+  background-color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+.menu-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ant-menu {
+  background-color: white;
+}
+
+.ant-menu-item {
+  background-color: white;
+}
+
+.ant-menu-item:hover {
+  background-color: #e6f7ff;
+}
+
+.sidebar-footer {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.sidebar-footer-button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.content-sidebar {
+  max-width: 100vw;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sidebar-toggle {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}

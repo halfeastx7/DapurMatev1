@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+body {
+  margin: 0; /* Remove default margin */
+  display: flex; /* Flexbox to align sidebar and main content */
+  overflow-x: hidden; /* Prevent horizontal scrolling when sidebar is open */
+}
+
+.App-sidebar {
+  display: flex;
+  height: 100vh;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.sidebar-main {
+  background-color: white;
+  height: 100%;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width 0.3s ease, left 0.3s ease; /* Smooth transition */
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  width: 200px; /* Default width for expanded sidebar */
+}
+
+.sidebar-main.collapsed {
+  width: 80px; /* Width for collapsed sidebar */
+}
+
+.logo-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px; /* Ensure the height matches the sidebar's width when collapsed */
+  width: 100%; /* Ensure full width for flex centering */
+  margin-top: 20px; /* Added margin to top of logo */
+}
+
+.logo-text {
+  font-family: 'Lilita One', cursive;
+  font-size: 2rem;
+  color: #29a847;
+  text-align: center;
+}
+
+.logo-text-collapsed {
+  font-family: 'Lilita One', cursive;
+  font-size: 1rem;
+  color: #29a847;
+  transform: rotate(-90deg); /* Rotate text 90 degrees */
+  transform-origin: center; /* Center the rotation origin */
+  white-space: nowrap; /* Prevent text from wrapping */
+  text-align: center; /* Center text horizontally */
+  margin: 0; /* Remove any default margin */
+  line-height: 80px; /* Align text vertically */
+  width: 80px; /* Ensure width matches sidebar when collapsed */
+  display: flex; /* Use flex to center text */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+}
+
+.sidebar-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 100%; /* Ensure full width for flex centering */
+  background-color: #fff;
+  margin-top: 20px; /* Added margin for spacing */
+}
+
+.sidebar-logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.menu-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0; /* Adjust padding if needed */
+}
+
+/* Remove underline from sidebar navigation links */
+.ant-menu-item a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color for better styling control */
+}
+
+/* Optional: Change color on hover */
+.ant-menu-item a:hover {
+  color: #fff; /* Change text color on hover */
+}
+
+.ant-menu {
+  background-color: rgb(255, 255, 255);
+  border-right: none; /* Removes the border on the right */
+}
+
+.ant-menu-item {
+  background-color: white;
+}
+
+.ant-menu-item:hover {
+  background-color: #29a847;
+  color: #fff; /* Ensures text color changes on hover */
+}
+
+.ant-menu-item-selected {
+  background-color: #29a847 !important; /* Background color when item is selected */
+  color: #fff !important; /* Text color when item is selected */
+}
+
+.sidebar-footer-button {
+  text-align: center;
+  margin-top: auto;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding-bottom: 20px; /* Adjusted for spacing */
+}
+
+.sidebar-toggle {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Main content adjustment */
+.main-content {
+  flex: 1; /* Allow main content to grow and fill remaining space */
+  transition: margin-left 0.3s ease; /* Smooth transition for sidebar toggle */
+  margin-left: 200px; /* Default margin when sidebar is expanded */
+}
+
+.main-content.sidebar-open {
+  margin-left: 200px; /* Adjust margin when sidebar is expanded */
+}
+
+.main-content.sidebar-collapsed {
+  margin-left: 80px; /* Adjust margin when sidebar is collapsed */
+}
+
+@media (max-width: 768px) {
+  .sidebar-main {
+    width: 60px; /* Adjusted for smaller screens */
+  }
+
+  .sidebar-main.collapsed {
+    width: 40px; /* Adjusted width for collapsed state on smaller screens */
+  }
+
+  .main-content.sidebar-open {
+    margin-left: 60px; /* Adjust margin when sidebar is open on smaller screens */
+  }
+
+  .main-content.sidebar-collapsed {
+    margin-left: 40px; /* Adjust margin when sidebar is collapsed on smaller screens */
+  }
+}

@@ -1,0 +1,87 @@
+.recipe-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.recipe-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: #343a40;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.filter-section input,
+.filter-section select {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  flex: 1;
+  min-width: 200px;
+  margin-right: 10px;
+}
+
+.recipe-grid {
+  display: flex;
+  justify-content: center;
+  /* Pusatkan kotak resipi */
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.recipe-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  max-width: 400px;
+  /* Lebar maksimum kotak */
+  width: 100%;
+  /* Lebar 100% untuk memastikan ia tidak lebih besar dari maks-width */
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+.no-recipes-found {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.5rem;
+  color: #ff6f61;
+  border: 2px dashed #ff6f61;
+  border-radius: 8px;
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

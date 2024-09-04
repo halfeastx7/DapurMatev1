@@ -1,0 +1,184 @@
+/* Background untuk keseluruhan halaman */
+/* body {
+    background-color: #f4f7fa;
+    /* Warna latar belakang yang lembut dan neutral */
+    /* margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+} */ */
+
+/* Gaya untuk Label Upload Gambar */
+.upload-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.upload-label:hover {
+    background-color: #0056b3;
+}
+
+.upload-label input[type="file"] {
+    display: none;
+}
+
+/* Gaya untuk AddRecipe Form */
+.add-recipe {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.add-recipe h1 {
+    font-size: 2rem;
+    color: #343a40;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.add-recipe form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-recipe input,
+.add-recipe select,
+.add-recipe textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.add-recipe textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.ingredient-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ingredient-input input {
+    flex: 1;
+}
+
+.ingredient-input button {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #ff4d4d;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ingredient-input button:hover {
+    background-color: #e60000;
+}
+
+.add-recipe button[type="button"] {
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-recipe button[type="button"]:hover {
+    background-color: #45a049;
+}
+
+.add-recipe button[type="submit"] {
+    padding: 12px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-recipe button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .add-recipe {
+        padding: 15px;
+    }
+
+    .add-recipe h1 {
+        font-size: 1.5rem;
+    }
+
+    .add-recipe input,
+    .add-recipe select,
+    .add-recipe textarea {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .ingredient-input button {
+        padding: 4px 8px;
+        font-size: 0.8rem;
+    }
+
+    .add-recipe button[type="button"],
+    .add-recipe button[type="submit"] {
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .add-recipe {
+        padding: 10px;
+    }
+
+    .add-recipe h1 {
+        font-size: 1.2rem;
+    }
+
+    .add-recipe input,
+    .add-recipe select,
+    .add-recipe textarea {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    .ingredient-input button {
+        padding: 3px 6px;
+        font-size: 0.75rem;
+    }
+
+    .add-recipe button[type="button"],
+    .add-recipe button[type="submit"] {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
